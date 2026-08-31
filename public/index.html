@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Incident Analyzer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <main class="console">
+
+    <div class="console__corner console__corner--tl" aria-hidden="true"></div>
+    <div class="console__corner console__corner--tr" aria-hidden="true"></div>
+    <div class="console__corner console__corner--bl" aria-hidden="true"></div>
+    <div class="console__corner console__corner--br" aria-hidden="true"></div>
+
+    <header class="console__header">
+      <div class="console__title-row">
+        <span class="status-dot" aria-hidden="true"></span>
+        <h1 class="console__title">AI INCIDENT ANALYZER</h1>
+      </div>
+      <p class="console__subtitle">Analyze application logs using GenAI</p>
+    </header>
+
+    <div class="console__rule"></div>
+
+    <section class="console__body">
+
+      <label class="field-label" for="log-input">
+        <span class="field-label__index">01</span> LOG INPUT
+      </label>
+
+      <div class="input-frame">
+        <textarea
+          id="log-input"
+          class="log-input"
+          placeholder="Paste application logs here...&#10;&#10;ERROR PaymentService...&#10;Connection refused..."
+          spellcheck="false"
+        ></textarea>
+      </div>
+
+      <div class="action-row">
+        <button id="analyze-btn" class="analyze-btn" type="button">
+          <span class="analyze-btn__bracket">[</span>
+          <span class="analyze-btn__label">ANALYZE</span>
+          <span class="analyze-btn__bracket">]</span>
+        </button>
+        <span id="status-text" class="status-text"></span>
+      </div>
+
+      <section id="result-panel" class="result-panel" hidden>
+        <label class="field-label">
+          <span class="field-label__index">02</span> ANALYSIS OUTPUT
+        </label>
+        <div id="result-content" class="result-content"></div>
+      </section>
+
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
