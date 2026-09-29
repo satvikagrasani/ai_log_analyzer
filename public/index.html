@@ -33,6 +33,12 @@
         <span class="field-label__index">01</span> LOG INPUT
       </label>
 
+      <div class="upload-row">
+        <label class="upload-btn" for="log-file">[ UPLOAD .LOG / .TXT ]</label>
+        <input id="log-file" type="file" accept=".log,.txt,text/plain" hidden>
+        <span id="file-name" class="status-text"></span>
+      </div>
+
       <div class="input-frame">
         <textarea
           id="log-input"
